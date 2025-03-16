@@ -1,0 +1,102 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(14, 12, 21);
+    font-family: monospace;
+    color: lightgray;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    border: 0.5px solid rgba(110, 101, 114, 0.5);
+    z-index: 999;
+}
+
+.head-left{
+    display: flex;
+    align-items: center;
+}
+
+.head-left img{
+    height: 45px;
+    margin-right: 15px;
+}
+
+header ul{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+header ul li{
+    list-style-type: none;
+}
+
+header a{
+    text-decoration: none;
+    color: gray;
+    font-weight: 900;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+header a:hover{
+    color: lightgray;
+    text-shadow: 0 0 15px rgba(255, 255, 255, .352);
+}
+
+.head-right{
+    display: flex;
+    align-items: center;
+}
+
+.button-box{
+    position: relative;
+    width: 100px;
+    height: 45px;
+    margin-left: 25px;
+    background: linear-gradient(to right, #00aaa7, #7f42a7, #6600c5, #1f2b9c, #2a46ff, #0099ff, #00aaa7);
+    border-radius: 10px;
+    background-size: 200%;
+    animation: animationGradient 2.5s linear infinite;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 99% 99%, 0% 100%);
+}
+
+@keyframes animationGradient{
+    to{
+        background-position: 200%;
+    }
+}
+
+.head-right button{
+    position: absolute;
+    inset: 3px 3px 3px 3px;
+    border: none;
+    background-color: rgb(14, 12, 21);
+    color: lightgray;
+    border-radius: 10px;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 99% 99%, 0% 100%);
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+
+.head-right button:hover{
+    color: #7e00d2;
+    scale: .9;
+    font-weight: 900;
+}
