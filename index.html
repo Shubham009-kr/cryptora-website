@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cryptora</title>
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <div class="container">
@@ -22,7 +23,7 @@
             <div class="head-right">
                 <a href="#">NEW ACCOUNT</a>
                 <div class="button-box">
-                    <button>SIGN IN</button>
+                    <button id="signinButton">SIGN IN</button>
                 </div>
             </div>
         </header>
@@ -46,15 +47,42 @@
                     <img src="./assets/images/element2.png" alt="element2-image">
                 </div>
             </div>
+            <h4>Helping Investors get the best of Crypto World at Cryptora.</h4>
+            <div class="companies-list">
+                <div class="company">
+                    <img src="./assets/images/company1.png" alt="">
+                    <p>Mermic</p>
+                </div>
+                <div class="company">
+                    <img src="./assets/images/company2.png" alt="">
+                    <p>Ipsum</p>
+                </div>
+                <div class="company">
+                    <img src="./assets/images/company3.png" alt="">
+                    <p>Cryptix</p>
+                </div>
+                <div class="company">
+                    <img src="./assets/images/company4.png" alt="">
+                    <p>Webverse</p>
+                </div>
+                <div class="company">
+                    <img src="./assets/images/company5.png" alt="">
+                    <p>TradeCryp</p>
+                </div>
+            </div>
         </section>
-        <div class="signin-page-box">
+        <div id="signinPage" class="signin-page-box">
             <div class="signin-box">
                 <h1>Sign In</h1>
                 <input type="text" placeholder="User Name">
                 <input type="email" placeholder="Email">
                 <input type="password" placeholder="Password">
+                <button>Sign In</button>
+                <p>Log In</p>
+                <div id="closeSignIn"><i class='bx bx-x'></i></div>
             </div>
         </div>
+        <section class="features-section"></section>
     </div>
     <script src="script.js"></script>
 </body>
