@@ -111,6 +111,7 @@ header a:hover{
     width: 95%;
     height: 190vh; /* can be changed to 2000px */
     overflow: hidden;
+    border: 0.5px solid rgba(107, 88, 116, 0.5);
 }
 
 .hero-blur-image{
@@ -402,5 +403,299 @@ header a:hover{
 .companies-list .company p{
     font-size: 2rem;
     font-weight: 500;
+}
 
+.features-section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    border: 0.5px solid rgba(107, 88, 116, 0.5);
+    border-top: none;
+    padding-bottom: 10%;
+}
+
+.explore-more img{
+    width: 70px;
+}
+
+.features-section h1{
+    font-size: 3rem;
+    max-width: 600px;
+    text-align: center;
+    color: white;
+    margin: 100px 0;
+}
+
+.features-card-box{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: center;
+    gap: 30px;
+}
+
+.features-card{
+    position: relative;
+    width: 27%;
+    min-width: 400px;
+    height: 500px;
+    background-color: rgb(17, 14, 27);
+    border-radius: 20px;
+    clip-path: polygon(0 0, 85% 0, 100% 10%, 100% 70%, 100% 100%, 0 100%, 0% 70%, 0% 30%);
+}
+
+.features-card h2{
+    font-size: 2rem;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.features-card p{
+    position: absolute;
+    top: 28%;
+    left: 5%;
+    max-width: 400px;
+    font-size: 1.2rem;
+    color: rgb(127, 109, 135);
+    line-height: 25px;
+}
+
+.features-card .explore-more{
+    position: absolute;
+    left: 10%;
+    bottom: 8%;
+    right: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.features-card .explore-more a{
+    text-decoration: none;
+    color: lightgray; 
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-wrap: nowrap;
+}
+
+.features-back-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: 0.5s ease all;
+}
+
+.features-back-img:hover{
+    opacity: 0.1;
+}
+
+.chatApp-section{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    height: 100%;
+    border: 0.5px solid rgba(107, 88, 116, 0.5);
+    border-top: none;
+}
+
+.chatApp-section .left-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    margin-left: 10%;
+    width: 40%;
+}
+
+.chatApp-section .left-container h1{
+    font-size: 2.8rem;
+    max-width: 650px;
+    margin-top: 0 ;
+}
+
+.chatApp-section .left-container p{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.chatApp-section .left-container p img{
+    height: 25px;
+    margin-right: 20px;
+}
+
+.chatApp-section .left-container h2{
+    font-size: 1.1rem;
+    max-width: 400px;
+    color: rgb(127, 109, 135);
+    line-height: 25px;
+}
+
+.chatApp-section .left-container .button-box{
+    margin: 0;
+    margin-top: 40px;
+    width: 150px;
+    height: 50px;
+}
+
+.chatApp-section .right-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+    margin-right: 5%;
+    width: 60%;
+}
+
+.chatApp-section .right-container img{
+    width: 70%;
+}
+
+.chatApp-section .right-container h2{
+    max-width: 500px; /* can be 400px */
+    font-size: 1.8rem;
+    color: rgb(127, 109, 135);
+    line-height: 35px;
+}
+
+.generative-section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    border: 0.5px solid rgba(107, 88, 116, 0.5);
+    border-top: none;
+    border-bottom: none;
+    padding-top: 10%;
+}
+
+.generative-section h1{
+    font-size: 2.8rem;
+    text-align: center;
+    color: white;
+    margin: 0 10px;
+}
+
+.generative-section p{
+    font-size: 1.2rem;
+    color: rgb(127, 109, 135);
+    text-align: center;
+    margin: 70px 100px;
+}
+
+.generative-section .grid-box{
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 95%;
+    max-width: 2000px;
+    margin-top: 100px;
+    gap: 30px;
+}
+
+.generative-section .grid-box .grid-card{
+    position: relative;
+    border: 0.5px solid rgba(107, 88, 116, 0.5);
+    width: 100%;
+    height: 1100px;
+    border-radius: 30px;
+}
+
+.generative-section .grid-box .grid1, .grid4{
+    grid-column: span 2;
+}
+
+.generative-section .grid-box .grid1 .grid1-robot-img{
+    height: 140%;
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    border-radius: 30px;
+}
+
+.generative-section .grid-box .grid-card .info{
+    position: absolute;
+    right: 3%;
+    top: 20%;
+}
+
+.generative-section .grid-box .grid-card .info h2{
+    font-size: 2rem;
+    font-weight: bold;
+    backdrop-filter: blur(5px);
+}
+
+.generative-section .grid-box .grid-card .info h4{
+    font-size: 1.2rem;
+    color: rgb(127, 109, 135);
+    max-width: 400px;
+    margin-left: 100px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.generative-section .grid-box .grid-card .info p{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1rem;
+    border-top: 0.5px solid rgba(107, 88, 116, 0.5);
+    padding-top: 10px;
+    border-radius: 10px;
+}
+
+.generative-section .grid-box .grid-card .info p img{
+    height: 40px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.generative-section .grid-box .grid2{
+    position: relative;
+}
+
+.generative-section .grid-box .grid2 img{
+    height: 100%;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    border-radius: 30px;
+}
+
+.generative-section .grid-box .grid2 h1{
+    position: absolute;
+    bottom: 25%;
+    left: 8%;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.generative-section .grid-box .grid2 p{
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    font-size: 1.2rem;
+    color: rgb(127, 109, 135);
+    max-width: 400px;
+    font-weight: bold;
+}
+
+.generative-section .grid-box .grid2 div{
+    height: 130px;
+    width: 300px;
+    background-color: black;
+    position: absolute;
+    top: 10%;
+    right: 20%;
+    border-radius: 5px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
+
+.generative-section .grid-box .grid2 div h2{
+    width: 80%;
+    margin-top: 15px;
+    margin-left: 20px;
 }
