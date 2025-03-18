@@ -571,6 +571,7 @@ header a:hover{
     border-top: none;
     border-bottom: none;
     padding-top: 10%;
+    overflow: hidden;
 }
 
 .generative-section h1{
@@ -698,4 +699,172 @@ header a:hover{
     width: 80%;
     margin-top: 15px;
     margin-left: 20px;
+}
+
+.generative-section .grid-box .grid3{
+    /* background-color: #15131d; */
+    position: relative;
+}
+
+.generative-section .grid-box .grid3 img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    object-fit: cover;
+    border-radius: 30px;
+    z-index: -1;
+}
+
+.generative-section .grid-box .grid3 .info{
+    width: 100%;
+    position: absolute;
+    left: 11%;
+    right: 5%;
+    margin-top: 20%;
+    color: white;
+}
+
+.generative-section .grid-box .grid3 .info .info-icons{
+    display: flex;
+    width: 100%;
+    gap: 10%;
+    flex-wrap: wrap;
+}
+
+.generative-section .grid-box .grid3 .info .info-icons div{
+    border-radius: 20px;
+    font-size: 3rem;
+}
+
+.generative-section .grid-box .grid4 .grid4-robot-img{
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 30px;
+}
+
+.pricing-section{
+    width: 95%;
+    height: 2000px;
+    border: 0.5px solid rgba(107, 88, 116, 0.5);
+    border-top: none;
+    border-bottom: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.pricing-section .pricing-img-box{
+    position: relative;
+    width: 85%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pricing-section .pricing-img-box img{
+    position: absolute;
+    top: 20%;
+}
+
+.pricing-section .pricing-img-box img:nth-child(2){
+    height: 500px;
+    margin-top: 5%;
+}
+
+.pricing-section .title{
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+}
+
+.pricing-section .pricing-container{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    column-gap: 20px;
+}
+
+.pricing-section .price-box{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    width: 30%;
+    height: 900px;
+    border: 0.5px solid rgba(107, 88, 116, 0.5);
+    padding: 30px;
+    border-radius: 50px;
+    margin-top: 50px;
+}
+
+.pricing-section .price-box h1{
+    font-size: 1.5rem;
+    color: #ffc786;
+    margin-bottom: 20px;
+}
+
+.pricing-section .price-box h2{
+    font-size: 1rem;
+}
+
+.pricing-section .price-box h3{
+    font-size: 4rem;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.pricing-section .price-box>button{
+    border: none;
+    background-color: gray;
+    color: black;
+    border-radius: 10px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.pricing-section .price-box p{
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: rgb(127, 109, 135);
+    font-weight: 700;
+    max-width: 500px;
+    padding-top: 20px;
+    margin: 0;
+}
+
+.pricing-section .price-box p img{
+    height: 30px;
+    margin-right: 20px;
+}
+
+.pricing-section .price-box:nth-child(2){
+    margin-top: 20px;
+    height: 950px;
+}
+
+.pricing-section .price-box:nth-child(2) h1{
+    color: #7e00d2;
+}
+
+.pricing-section .price-box:nth-child(3) h1{
+    color: #ff776f;
+}
+
+.pricing-section a{
+    color: white;
+    font-size: 2rem;
+    margin-top: 70px;
+    text-decoration: none;
 }
