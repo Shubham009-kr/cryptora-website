@@ -252,6 +252,7 @@ header a:hover{
     scale: 0;
     opacity: 0;
     filter: blur(10px);
+    z-index: 10;
 }
 
 .signin-box{
@@ -1065,6 +1066,117 @@ footer .box-icons a:hover{
     }
 }
 
+.menu-icon{
+    font-size: 2rem;
+    cursor: pointer;
+    position: relative;
+    width: 40px;
+    height: 35px;
+    margin-right: 10px;
+    background: linear-gradient(to right, #00aaa7, #7f42a7, #6600c5, #1f2b9c, #2a46ff, #0099ff, #00aaa7);
+    background-size: 200%;
+    animation: animationGradient 2.5s linear infinite;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 99% 99%, 0% 100%);
+    border-radius: 5px;
+    display: none;
+}
+
+.menu-icon i{
+    position: absolute;
+    inset: 2px 2px 2px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #15131d;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 99% 99%, 0% 100%);
+    border-radius: 5px;
+    font-size: 1.8rem;
+}
+
+.sidebar{
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 0%;
+    background-color: rgb(14, 12, 21);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    opacity: 0;
+}
+
+.close-icon{
+    font-size: 3rem;
+    color: lightgray;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+
+.sidebar ul li{
+    list-style: none;
+    margin: 40px 0;
+}
+
+.sidebar ul li a{
+    text-decoration: none;
+    color: lightgray;
+    font-size: 2.2rem;
+    font-weight: 900;
+    text-shadow: 0 0 15px rgba(128, 128, 128, 0.4);
+}
+
+.social-sidebar{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    margin-left: 30px;
+    text-wrap: nowrap;
+    gap: 20px;
+}
+
+.social-sidebar a{
+    color: gray;
+    border-radius: 50%;
+    font-size: 2.8rem;
+    text-decoration: none;
+    transition: 0.5s ease all;
+}
+
+.sidebar .button-box{
+    width: 150px;
+    height: 50px;
+    margin-top: 10%;
+    margin-left: 30px;
+}
+
+.sidebar.openSidebar{
+    animation: openSideBarAnimation 1s forwards;
+}
+
+@keyframes openSideBarAnimation{
+    to{
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+.sidebar.closeSidebar {
+    animation: closeSideBarAnimation 1s forwards;
+}
+
+@keyframes closeSideBarAnimation {
+    from {
+        width: 100%;
+        opacity: 1;
+    }to{
+        width: 0%;
+        opacity: 0;
+    }
+}
+
 /* TABLET RESPONSIVE */
 
 @media screen and (max-width:1200px){
@@ -1223,4 +1335,285 @@ footer .box-icons a:hover{
     footer h1{
         font-size: 1.5rem;
     }
+}
+
+/* MOBILE RESPONSIVE */
+
+@media screen and (max-width:700px){
+    .head-left img{
+        height: 40px;
+        margin-left: 10px;
+    }
+    .head-left h1{
+        font-size: 1.2rem;
+    }
+    header ul{
+        display: none;
+    }
+
+
+    .hero{
+        height: 1400px;
+    }
+    .hero h1{
+        top: 8%;
+        font-size: 1.8rem;
+    }
+    .hero h3{
+        top: 20%;
+        font-size: 1rem;
+        max-width: 350px;
+        line-height: 22px;
+    }
+    .hero button{
+        top: 32%;
+        width: 120px;
+        height: 40px;
+        font-size: .8rem;
+    }
+    .hero-image-robot-box{
+        height: 300px;
+        width: 350px;
+        top: -10%;
+    }
+    .hero h4{
+        text-align: center;
+        bottom: 28%;
+        font-size: .8rem;
+        max-width: 300px;
+    }
+    .companies-list{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        bottom: 3%;
+        border: 0.5px solid rgba(107, 88, 116, 0.5);
+        border-radius: 10px;
+    }
+
+    .signin-page-box{
+        height: 45vh;
+    }
+    .signin-box input{
+        height: 20px;
+        width: 100px;
+    }
+    .signin-box button{
+        width: 40%;
+        height: 30px;
+        font-size: 1rem;
+        border-top-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+    .signin-box p{
+        width: 40%;
+        height: 30px;
+        font-size: 1rem;
+        border-top-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+
+    .features-section h1{
+        font-size: 1.8rem;
+        max-width: 350px;
+    }
+    .features-card{
+        min-width: 300px;
+    }
+    .features-card h2{
+        font-size: 1.5rem;
+    }
+    .features-card .explore-more img{
+        height: 50px;
+        width: 50px;
+    }
+
+    .chatApp-section .left-container h1{
+        font-size: 1.8rem;
+        max-width: 350px;
+    }
+    .chatApp-section .right-container h2{
+        font-size: 1rem;
+        line-height: 22px;
+        max-width: 350px;
+    }
+
+    .generative-section h1{
+        font-size: 1.8rem;
+        margin-top: 50px;
+        max-width: 380px;
+    }
+    .generative-section p{
+        font-size: 1rem;
+        margin-top: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
+        max-width: 400px;
+    }
+    .generative-section .grid-box .grid-card{
+        height: 800px;
+    }
+    .generative-section .grid-box .grid-card .info{
+        border-radius: 30px;
+    }
+    .generative-section .grid-box .grid-card .info h2{
+        margin-top: 120px;
+        margin-left: 30px;
+        font-size: 1.5rem;
+    }
+    .generative-section .grid-box .grid-card .info h4{
+        font-size: 1.2rem;
+        margin-left: 10px;
+    }
+    .generative-section .grid-box .grid-card .info p{
+        font-size: 1rem;
+        padding-top: 10px;
+        border-top: 1px solid rgb(116, 104, 121);
+    }
+    .generative-section .grid-box .grid-card .info p img{
+        height: 25px;
+        width: 25px;
+        margin-right: 10px;
+    }
+    .generative-section .grid-box .grid-card .grid1-robot-img{
+        height: 80%;
+        bottom: 0%;
+        border-radius: 30px;
+    }
+    .generative-section .grid-box .grid2 img{
+        height: 70%;
+        width: 121%;
+        bottom: 0;
+    }
+    .generative-section .grid-box .grid2 h1{
+        top: -2%;
+        left: 3%;
+        font-size: 1.8rem;
+    }
+    .generative-section .grid-box .grid2 p{
+        font-size: 1rem;
+        top: 10%;
+        left: 3%;
+    }
+    .generative-section .grid-box .grid2 div{
+        top: 40%;
+        left: 10%;
+    }
+    .generative-section .grid-box .grid3 img{
+        height: 70%;
+        width: 105%;
+        bottom: 0;
+        opacity: .8;
+    }
+    .generative-section .grid-box .grid3 .info h2{
+        position: absolute;
+        top: -15%;
+        left: -8%;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    .generative-section .grid-box .grid3 .info h4{
+        position: absolute;
+        font-size: 1rem;
+        top: 12%;
+        left: 0%;
+        max-width: 350px;
+    }
+    .generative-section .grid-box .grid3 .info .info-icons{
+        width: 350px;
+        gap: 10px;
+        position: absolute;
+        bottom: 10%;
+        left: 12%;
+    }
+    .generative-section .grid-box .grid-card .grid4-robot-img{
+        height: 80%;
+        width: 115%;
+        bottom: 0%;
+        border-radius: 30px;
+    }
+    .generative-section .grid-box .grid4 .info h2{
+        margin-top: 10px;
+        margin-left: 30px;
+        font-size: 1.8rem;
+    }
+    .generative-section .grid-box .grid4 .info h4{
+        font-size: 1.2rem;
+        margin-left: 0px;
+        max-width: 350px;
+    }
+    .generative-section .grid-box .grid4 .info p{
+        font-size: 1rem;
+        padding-top: 10px;
+        border-top: 1px solid rgb(116, 104, 121);
+    }
+    .generative-section .grid-box .grid4 .info p img{
+        height: 25px;
+        width: 25px;
+        margin-right: 10px;
+    }
+
+    .pricing-section{
+        height: 3600px;
+    }
+    .pricing-section .pricing-img-box img:nth-child(1){
+        height: 200px;
+    }
+    .pricing-section .pricing-img-box img:nth-child(2){
+        height: 150px;
+    }
+
+    .pricing-section .title{
+        font-size: 2.5rem;
+    }
+    .pricing-section .price-box{
+        width: 80%;
+        margin-left: 2%;
+    }
+    .pricing-section .price-box h1{
+        font-size: 1.8rem;
+    }
+    .pricing-section .price-box h2{
+        font-size: 1.2rem;
+        max-width: 350px;
+    }
+    .pricing-section a{
+        font-size: 1.5rem;
+    }
+
+    .roadmap-section h1{
+        font-size: 2.2rem;
+        margin-top: 100px;
+        margin-bottom: 20%;
+    }
+    .roadmap-cards-box .roadmap-card{
+        height: 800px;
+    }
+    .roadmap-cards-box .roadmap-card h2{
+        bottom: 30%;
+    }
+    .roadmap-cards-box .roadmap-card p{
+        font-size: 1.2rem;
+    }
+
+    footer{
+        flex-direction: column;
+    }
+    footer h1{
+        font-size: 1rem;
+        margin-left: 2%;
+        margin-top: 10%;
+    }
+    footer .box-icons a{
+        font-size: 2rem;
+        margin-bottom: 20%;
+    }
+
+    .head-right{
+        display: none;
+    }
+    .menu-icon{
+        display: block;
+    }
+
 }
