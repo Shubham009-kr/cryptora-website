@@ -868,3 +868,359 @@ header a:hover{
     margin-top: 70px;
     text-decoration: none;
 }
+
+.roadmap-section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    border: 0.5px solid rgba(107, 88, 116, 0.5);
+    border-top: none;
+}
+
+.roadmap-section h1{
+    font-size: 3.5rem;
+    margin-top: 200px;
+    text-align: center;
+}
+
+.roadmap-section .roadmap-card{
+    border: 0.5px solid rgba(107, 88, 116, 0.5);
+    position: relative;
+    height: 900px;
+    width: 45%;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.roadmap-section .roadmap-card img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.roadmap-section .roadmap-cards-box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 2000px;
+}
+
+.roadmap-section .roadmap-card h2{
+    position: absolute;
+    bottom: 25%;
+    left: 8%;
+    font-size: 2rem; 
+}
+
+.roadmap-section .roadmap-card p{
+    position: absolute;
+    bottom: 6%;
+    left: 8%;
+    max-width: 80%;
+    font-size: 1.5rem;
+    color: rgb(127, 109, 135);
+}
+
+.roadmap-section .roadmap-card:nth-child(2){
+    margin-top: 10%;
+}
+
+.roadmap-section .roadmap-card:nth-child(3){
+    margin-top: -10%;
+}
+
+.roadmap-section .button-box{
+    width: 200px;
+    height: 70px;
+    margin: 100px;
+}
+
+.roadmap-section .button-box button{
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.roadmap-section .roadmap-gradient-left{
+    position: absolute;
+    z-index: -1;
+    top: 30%;
+    left: 0%;
+    box-shadow: 0 0 300px 300px rgba(181, 47, 226, 0.10);
+    mix-blend-mode: lighten;
+}
+
+.roadmap-section .roadmap-gradient-right {
+    position: absolute;
+    z-index: -1;
+    top: 70%;
+    right: 0%;
+    box-shadow: 0 0 300px 300px rgba(181, 47, 226, 0.10);
+    mix-blend-mode: lighten;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    border: 0.5px solid rgba(107, 88, 116, 0.5);
+    height: 200px;
+}
+
+footer h1{
+    margin-left: 5%;
+    color: gray;
+}
+
+footer .box-icons{
+    margin-right: 5%;
+    display: flex;
+    gap: 20px;
+}
+
+footer .box-icons a{
+    color: gray;
+    /* border: 0.5px solid rgba(107, 88, 116, 0.5); */
+    border-radius: 50%;
+    font-size: 2.8rem;
+    text-decoration: none;
+    transition: 0.5s ease all;
+}
+
+footer .box-icons a:hover{
+    box-shadow: 0 0 15px rgba(white, white, white, 0.817);
+}
+
+.autoDisplay{
+    animation: autoDisplayAnimation;
+    animation-timeline: view();
+}
+
+@keyframes autoDisplayAnimation{
+    from{
+        filter: blur(10px);
+        transform: translateY(-200px) scale(0.5);
+    }50%{
+        filter: blur(0);
+        transform: translateY(0) scale(1);
+    }
+}
+
+.fadeInLeft{
+    animation: fadeInLeftAnimation;
+    animation-timeline: view();
+}
+
+@keyframes fadeInLeftAnimation{
+    0%{
+        opacity: 0;
+        transform: translateX(-200px) scale(0.2);
+    }35%, 50%{
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+.fadeInRight {
+    animation: fadeInRightAnimation;
+    animation-timeline: view();
+}
+
+@keyframes fadeInRightAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(200px) scale(0.2);
+    }
+
+    35%,
+    50% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+.autoBlur{
+    animation: autoBlurAnimation linear both;
+    animation-timeline: view();
+}
+
+@keyframes autoBlurAnimation{
+    0%{
+        filter: blur(40px);
+        opacity: 0;
+    }30%, 70%{
+        filter: blur(0);
+        opacity: 1;
+    }100%{
+        filter: blur(40px);
+        opacity: 0;
+    }
+}
+
+/* TABLET RESPONSIVE */
+
+@media screen and (max-width:1200px){
+    header{
+        padding: 10px 10px;
+    }
+    header ul{
+        min-width: 300px;
+    }
+    .head-right a{
+        margin-right: -20px;
+    }
+
+    .hero h1{
+        font-size: 2.5rem;
+    }
+    .hero h3{
+        font-size: 1.5rem;
+        max-width: 650px;
+        top: 20%;
+        font-weight: 500;
+    }
+    .hero button{
+        width: 140px;
+        height: 50px;
+        font-size: 1rem;
+        top: 32%;
+    }
+    .hero-image-robot-box{
+        height: 650px;
+        margin-top: 320px;
+    }
+    .hero-image-robot-box .element1{
+        right: 5%;
+        top: -12%;
+    }
+    .hero-image-robot-box .element2{
+        left: 5%;
+        top: 95%;
+    }
+    .hero h4{
+        bottom: 11%;
+        font-size: 1rem;
+    }
+    .companies-list .company img{
+        height: 35px;
+    }
+    .companies-list .company p{
+        font-size: 1.2rem;
+    }
+    .signin-page-box{
+        width: 50%;
+    }
+
+    .chatApp-section{
+        flex-direction: column;
+    }
+    .chatApp-section .right-container h2{
+        max-width: 1000px;
+        margin-left: 10%;
+        font-size: 2rem;
+    }
+    .chatApp-section .right-container img{
+        margin-left: 20%;
+        width: 100%;
+    }
+
+    .generative-section .grid-box{
+        display: flex;
+        flex-direction: column;
+    }
+    .generative-section .grid-box .grid-card .grid1-robot-img{
+        height: 120%;
+        bottom: 0%;
+    }
+    .generative-section .grid-box .grid-card .info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        inset: 0 0 0 0;
+        background-color: #15131dbd;
+        backdrop-filter: blur(2px);
+    }
+    .generative-section .grid-box .grid-card .info h2{
+        backdrop-filter: none;
+        font-size: 3.2rem;
+    }
+    .generative-section .grid-box .grid-card .info h4{
+        font-size: 2.4rem;
+        max-width: 800px;
+    }
+    .generative-section .grid-box .grid-card .info p{
+        font-size: 2rem;
+        padding-top: 10px;
+        border-top: 1px solid rgb(116, 104, 121);
+    }
+    .generative-section .grid-box .grid2 h1{
+        font-weight: 700;
+        font-size: 2.5rem;
+    }
+    .generative-section .grid-box .grid2 p{
+        bottom: 10%;
+        left: 10%;
+        font-size: 1.5rem;
+        color: rgb(164, 159, 166);
+        max-width: 600px;
+    }
+    .generative-section .grid-box .grid3 .info{
+        background-color: transparent;
+    }
+    .generative-section .grid-box .grid3 img{
+        width: 70%;
+        height: 100%;
+        opacity: 0.4;
+    }
+    .generative-section .grid-box .grid3 .info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .generative-section .grid-box .grid3 .info .info-icons{
+        width: 40%;
+    }
+
+    .pricing-section .pricing-img-box img:nth-child(1){
+        width: 120%;
+        top: 30%;
+    }
+    .pricing-section .pricing-img-box img:nth-child(2){
+        height: 350px;
+    }
+    .pricing-section{
+        height: 4000px;
+    }
+    .pricing-container {
+        flex-direction: column;
+    }
+    .pricing-section .price-box{
+        width: 80%;
+        margin-left: 6%;
+    }
+
+    .roadmap-cards-box{
+        flex-direction: column;
+    }
+    .roadmap-cards-box .roadmap-card{
+        width: 90%;
+        height: 1200px;
+    }
+    .roadmap-cards-box .roadmap-card:nth-child(2), .roadmap-card:nth-child(3){
+        margin-top: 0;
+    }
+
+    footer h1{
+        font-size: 1.5rem;
+    }
+}
